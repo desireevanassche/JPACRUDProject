@@ -1,4 +1,4 @@
-package com.skilldistillery.plants.data;
+package com.skilldistillery.plantproject.data;
 
 import java.util.List;
 
@@ -8,7 +8,7 @@ import javax.transaction.Transactional;
 
 import org.springframework.stereotype.Service;
 
-import com.skilldistillery.plants.entities.Plant;
+import com.skilldistillery.jpaplants.entities.Plant;
 
 @Service
 @Transactional

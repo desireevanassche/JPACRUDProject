@@ -20,10 +20,12 @@
 <h1>WELCOME TO PLANT SITE</h1>
 
 
+
 <form action="getPlant.do" method="GET">
   Film ID: <input type="text" name="pid" />
   <input type="submit" value="Show Plant" />
 </form>
+
 
 <table>
 <thead> 
@@ -33,11 +35,12 @@
 </tr> </thead>
 
 
+
 <tbody>
 <c:forEach var="p" items="${plants}">
 <tr>
-<td>${f.id}</td>
-<td><a href = "getPlant.do?pid=${p.id }">${p.title}</a></td>
+<td>${p.id}</td>
+<td><a href = "getPlant.do?pid=${p.id}">${p.name}</a></td>
 </tr>
 </c:forEach>
 

@@ -1,4 +1,4 @@
-package com.skilldistillery.plants;
+package com.skilldistillery.plantproject;
 
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;
