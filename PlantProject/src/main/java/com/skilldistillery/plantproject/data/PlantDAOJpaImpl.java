@@ -52,13 +52,15 @@ public class PlantDAOJpaImpl implements PlantDAO {
 		Plant plant = em.find(Plant.class, id);
 		if(plant != null) {
 			em.remove(plant);
+			isDeleted = true; 
 		}
-		isDeleted = !em.contains(plant);
 		return isDeleted;
 	}
 
-//	@Override
-//	public int updatePlant() {
-//	
-//	}
-}
+	@Override
+	@Transactional
+	public Plant updatePlant(Plant plant, int id) {
+	
+	return null;
+	}
+} 

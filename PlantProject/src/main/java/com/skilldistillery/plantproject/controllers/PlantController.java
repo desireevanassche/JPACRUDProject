@@ -53,11 +53,11 @@ public class PlantController {
 		return "plant/show"; 
 }
 	@RequestMapping(path = "deleteplant.do")
-	public String deleteFilm(int id, Model model) {
+	public String deletePlant(int id, Model model) {
 		boolean plantDeleted = plantDao.deletePlant(id);
 		model.addAttribute("plant", plantDeleted); 
-		
-		if (plantDeleted) {
+//		System.out.println("43753489574857 **** PLANT DELETED ******  " + plantDeleted);
+		if (plantDeleted == true) {
 			return "deleteSuccessful";
 
 		} else {
