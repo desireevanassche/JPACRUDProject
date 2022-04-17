@@ -21,6 +21,7 @@
 
 <a href="plantForm.do">Add a plant</a>
 <a href="deleteForm.do">Delete a plant</a>
+<a href="updateForm.do">Update a plant</a>
 
 
 <form action="getPlant.do" method="GET">

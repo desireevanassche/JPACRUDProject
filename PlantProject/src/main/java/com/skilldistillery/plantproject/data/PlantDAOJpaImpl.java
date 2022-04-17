@@ -58,9 +58,18 @@ public class PlantDAOJpaImpl implements PlantDAO {
 	}
 
 	@Override
-	@Transactional
-	public Plant updatePlant(Plant plant, int id) {
+	public boolean updatePlant(Plant plant) {
+	Plant updatePlant = em.find(Plant.class, plant.getId());
 	
-	return null;
+	if(updatePlant != null) {
+	updatePlant.setName(plant.getName());
+	updatePlant.setBotanicalName(plant.getBotanicalName());
+	updatePlant.setCare(plant.getCare());
+	updatePlant.setHumidity(plant.getHumidity());
+	updatePlant.setLight(plant.getLight());
+	}
+	
+	
+	return em.contains(updatePlant);
 	}
 } 

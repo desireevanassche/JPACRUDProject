@@ -17,5 +17,7 @@ public interface PlantDAO {
 
 	public boolean deletePlant(int id);
 
-	public Plant updatePlant(Plant plant, int id);
+	public boolean updatePlant(Plant plant);
+
+
 }

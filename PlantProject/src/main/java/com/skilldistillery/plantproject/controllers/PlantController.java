@@ -26,6 +26,11 @@ public class PlantController {
 	  return "deletePlant";
 	}
 	
+	@RequestMapping(path = {"updateForm.do"})
+	public String updateForm() {
+		return "updatePlant";
+	}
+	
 	@RequestMapping(path = {"/", "home.do"})
 	public String index(Model model) {
 		List<Plant> plants = plantDao.findAll();
@@ -56,7 +61,6 @@ public class PlantController {
 	public String deletePlant(int id, Model model) {
 		boolean plantDeleted = plantDao.deletePlant(id);
 		model.addAttribute("plant", plantDeleted); 
-//		System.out.println("43753489574857 **** PLANT DELETED ******  " + plantDeleted);
 		if (plantDeleted == true) {
 			return "deleteSuccessful";
 
@@ -66,13 +70,14 @@ public class PlantController {
 		}
 	
 	@RequestMapping(path = "updatePlant.do")
-	public String updatePlant(Integer pid, Model model) {
-		Plant updatePlant = plantDao.findById(pid);
-		model.addAttribute("plant", updatePlant);
+	public String updatePlant(Plant plant, Model model) {
+		boolean plantUpdated = plantDao.updatePlant(plant);
+		if(plantUpdated) {
+			model.addAttribute("updatedPlant", plantUpdated);
+		}
+	
 		return "updateSuccessful";
 	}
-	
-	
 	
 	
 	}

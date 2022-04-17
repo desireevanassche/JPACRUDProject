@@ -13,7 +13,7 @@ public class Plant {
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private int id;
 	
-	@Column
+	@Column(name = "name")
 	private String name;
 	
 	@Column(name = "botanical_name")

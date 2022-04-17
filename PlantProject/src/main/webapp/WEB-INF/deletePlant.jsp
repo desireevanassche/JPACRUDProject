@@ -1,3 +1,5 @@
+
+   
 <%@ page language="java" contentType="text/html; charset=UTF-8"
 	pageEncoding="UTF-8"%>
 
@@ -26,7 +28,7 @@
 
 	<h1>Which plant would you like to delete? </h1>
 	<br>
-	      <p id="keyHead">Delete a Film</p>
+	      <p id="keyHead">Delete a Plant</p>
       <form action="deleteplant.do" method="POST">
 
       		<label for="id"></label> <input type="text" name="id" placeholder="Please Enter an ID">
@@ -37,3 +39,4 @@
 	
 	</body>
 </html>
+
