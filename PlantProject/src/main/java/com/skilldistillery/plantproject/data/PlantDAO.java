@@ -10,14 +10,16 @@ public interface PlantDAO {
 	
 	List<Plant> findAll();
 
-	public List<Plant> findByKeyword(String keyword);
+	List<Plant> findByKeyword(String keyword);
 
-	public Plant addPlant(Plant plant);
+	Plant addPlant(Plant plant);
 
 
 	public boolean deletePlant(int id);
 
-	public boolean updatePlant(Plant plant);
+	Plant updatePlant(int id, Plant plant);
+	
+//	public boolean updatePlant(Plant plant);
 
 
 }

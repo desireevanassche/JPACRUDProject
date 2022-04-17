@@ -56,20 +56,38 @@ public class PlantDAOJpaImpl implements PlantDAO {
 		}
 		return isDeleted;
 	}
-
+	
 	@Override
-	public boolean updatePlant(Plant plant) {
-	Plant updatePlant = em.find(Plant.class, plant.getId());
-	
-	if(updatePlant != null) {
-	updatePlant.setName(plant.getName());
-	updatePlant.setBotanicalName(plant.getBotanicalName());
-	updatePlant.setCare(plant.getCare());
-	updatePlant.setHumidity(plant.getHumidity());
-	updatePlant.setLight(plant.getLight());
+	public Plant updatePlant(int id, Plant plant) {
+	Plant managePlant = em.find(Plant.class, id);
+
+    managePlant.setName(plant.getName());
+    managePlant.setBotanicalName(plant.getBotanicalName());
+    managePlant.setHumidity(plant.getHumidity());
+    managePlant.setLight(plant.getLight());
+    managePlant.setCare(plant.getCare());
+		
+		
+		em.flush();
+		return managePlant;
 	}
+
+//	@Override
+//	public boolean updatePlant(Plant plant) {
+//	Plant updatePlant = em.find(Plant.class, plant.getId);
+//	
+//	if(updatePlant != null) {
+//	updatePlant.setName(plant.getName());
+//	updatePlant.setBotanicalName(plant.getBotanicalName());
+//	updatePlant.setCare(plant.getCare());
+//	updatePlant.setHumidity(plant.getHumidity());
+//	updatePlant.setLight(plant.getLight());
+//	}
+//	
+//	
+//	return em.contains(updatePlant);
+//	}
 	
+//	if(managePlant != null) {
 	
-	return em.contains(updatePlant);
-	}
 } 

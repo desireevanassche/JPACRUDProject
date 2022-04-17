@@ -13,17 +13,7 @@
 	<body>
 
 
-<c:choose>
-<c:when test="${updatedPlant }">
-
-Plant information has been updated 
-</c:when>
-
-<c:otherwise>
-Update failed please try again
-
-</c:otherwise>
- </c:choose>
+<h1>Plant edited</h1>
 
 </body>
 </html>

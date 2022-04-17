@@ -8,6 +8,8 @@
 <meta charset="UTF-8">
 <title>Insert title here</title>
 </head>
+
+
 <body>
 
 
@@ -15,33 +17,24 @@
 
 		<c:when test="${! empty plant}">
 
-			<ul id="show">
-				<h3>Plant by Keyword</h3>
+			<ul>
+				<h3>${plant.id}: Plant Name: ${plant.name}</h3>
 
-
-				<li>Plant Name: ${plant.name}</li>
 				<li>Botanical Name: ${plant.botanicalName}</li>
 				<li>Type: ${plant.type}</li>
+				<li>Humidity: ${plant.humidity}</li>
+				<li>Light: ${plant.light}</li>
+				<li>Care: ${plant.care}</li>
 
+			<form action="updatePlantById.do" method="GET">
+				<button name="id" type="submit" value="${plant.id}">Update</button>
+			</form>
 
+			<br>
 
-				<%-- <form action="updatefilm.jsp" method="GET">
-					<input type="hidden" name="filmId" value="${film.id}" /> <input
-						type="hidden" name="filmTitle" value="${film.title}" /> <input
-						type="hidden" name="filmDescription" value="${film.description}" />
-					<input type="hidden" name="filmLanguageId" value="${film.language}" />
-					<input type="hidden" name="filmReleaseYear"
-						value="${film.releaseYear}" /> <input type="hidden"
-						name="filmRating" value="${film.rating}" /> <input type="submit"
-						value="Edit Film Data" />
-				</form> --%>
-
-				<%-- 	<form action="deletefilm.do" method="POST">
-					<input type="hidden" name="id" value="${film.id}" /> <input
-						type="hidden" name="filmTitle" value="${film.title}" /> 
-						 <input type="submit"
-						value="Delete Film" />
-				</form> --%>
+			<form action="deleteplant.do" method="POST">
+				<button name="id" type="submit" value="${plant.id}">DELETE</button>
+			</form>
 
 
 
@@ -58,8 +51,10 @@
 					<li>Botanical Name: ${p.botanicalName}</li>
 					<li>Type: ${p.type}</li>
 					<br>
-					</c:forEach>
+				</c:forEach>
 		</c:when>
+		
+		
 		<c:otherwise>
 			<p>No Plant found!</p>
 		</c:otherwise>

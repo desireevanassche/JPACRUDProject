@@ -6,6 +6,8 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestMethod;
+import org.springframework.web.servlet.ModelAndView;
 
 import com.skilldistillery.jpaplants.entities.Plant;
 import com.skilldistillery.plantproject.data.PlantDAO;
@@ -38,26 +40,26 @@ public class PlantController {
 		return "index"; 
 	}
 	
-	@RequestMapping(path = "getPlant.do")
+	@RequestMapping(path = {"getPlant.do"})
 	public String showPlant(Integer pid, Model model) {
 		Plant plant = plantDao.findById(pid);
 		model.addAttribute("plant", plant);
 		return "plant/show";
 }
 	
-	@RequestMapping(path = "plantbykey.do")
+	@RequestMapping(path = {"plantbykey.do"})
 	public String findByKeyword(String keyword, Model model) {
 		List<Plant> plants = plantDao.findByKeyword(keyword);
 		model.addAttribute("plants", plants);
 		return "plant/show"; 
 }
-	@RequestMapping(path = "addPlant.do")
+	@RequestMapping(path = {"addPlant.do"})
 	public String addPlant(Plant plant, Model model) {
 		Plant newPlant = plantDao.addPlant(plant);
 		model.addAttribute("plant", newPlant);
 		return "plant/show"; 
 }
-	@RequestMapping(path = "deleteplant.do")
+	@RequestMapping(path = {"deleteplant.do"})
 	public String deletePlant(int id, Model model) {
 		boolean plantDeleted = plantDao.deletePlant(id);
 		model.addAttribute("plant", plantDeleted); 
@@ -69,16 +71,37 @@ public class PlantController {
 		}
 		}
 	
-	@RequestMapping(path = "updatePlant.do")
-	public String updatePlant(Plant plant, Model model) {
-		boolean plantUpdated = plantDao.updatePlant(plant);
-		if(plantUpdated) {
-			model.addAttribute("updatedPlant", plantUpdated);
-		}
-	
-		return "updateSuccessful";
+	@RequestMapping(path = "updatePlantById.do", params = "id", method = RequestMethod.GET)
+	public ModelAndView updatePlantById(int id) {
+		ModelAndView mv = new ModelAndView();
+		Plant p = plantDao.findById(id);
+		mv.addObject("plant", p);
+		mv.setViewName("updatePlant");
+		return mv;
 	}
 	
+	@RequestMapping(path = "updatePlant.do", method = RequestMethod.POST)
+	public ModelAndView updatePlant(int id, Plant plant) {
+		ModelAndView mv = new ModelAndView();
+		
+		plantDao.updatePlant(id, plant);
+		
+		mv.setViewName("updateSuccessful");
+		return mv;  
+	}
+	
+//	@RequestMapping(path = "updatePlant.do")
+//	public String updatePlant(Plant plant, Model model) {
+//		boolean plantUpdated = plantDao.updatePlant(plant);
+//		if(plantUpdated) {
+//			model.addAttribute("updatedPlant", plantUpdated);
+//		}
+//	
+//		return "updateSuccessful";
+//	}
+	
+	
+
 	
 	}
 
