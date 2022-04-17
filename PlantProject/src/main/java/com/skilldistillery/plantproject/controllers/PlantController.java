@@ -33,6 +33,18 @@ public class PlantController {
 		return "updatePlant";
 	}
 	
+
+	@RequestMapping(path = {"idSearch.do"})
+	public String idSearchPage() {
+		return "findById";
+	}
+	@RequestMapping(path = {"keySearch.do"})
+	public String keySearchPage() {
+		return "findByKey";
+	}
+	
+	
+	
 	@RequestMapping(path = {"/", "home.do"})
 	public String index(Model model) {
 		List<Plant> plants = plantDao.findAll();

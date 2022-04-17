@@ -19,21 +19,23 @@
 <main class="container-fluid">
 <h1>WELCOME TO PLANT SITE</h1>
 
+
+
+<a href="idSearch.do">Find by Id </a>
+<a href="keySearch.do">Find by Key </a>
 <a href="plantForm.do">Add a plant</a>
 <a href="deleteForm.do">Delete a plant</a>
 <a href="updateForm.do">Update a plant</a>
 
 
-<form action="getPlant.do" method="GET">
-  Film ID: <input type="text" name="pid" />
-  <input type="submit" value="Show Plant" />
-</form>
+
 
 
 <form action="plantbykey.do" method="GET">
   Plant KeyWord Search: <input type="text" name="keyword" />
   <input type="submit" value="Show Plant" />
-</form>
+</form> 
+
 
 
 <table>
