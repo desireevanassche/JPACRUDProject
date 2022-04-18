@@ -40,10 +40,7 @@
       </li>
    
     </ul>
-  <!--   <form class="form-inline my-2 my-lg-0">
-      <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
-      <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button> 
-    </form> -->
+
   </div>
 </nav>
 
@@ -56,7 +53,7 @@
       <div class="row no-gutters">
 
         <div class="col1" id="leftSide">
-        <img src="https://live.staticflickr.com/65535/52012326219_b98cf2085f_o.png" width="250" height="250" alt="plant">
+        <img src="https://live.staticflickr.com/65535/52012791968_645e62a402_w.jpg" width="400" height="400" alt="Add a Plant">
           
 
         </div>
@@ -68,17 +65,17 @@
      <h1>Add a Plant to the Database</h1>
      <fieldset>
 
-       <div  class="plant-details">
+       <!-- <div  class="plant-details"> -->
 
-         <div><label for="name">Name</label><input type="text" name="name" required></div>
+        <!--  <div> --><label for="name">Name</label><input type="text" name="name" required><!-- </div> -->
 
+<br>
+       <!--   <div> --><label for="botanicalName">Botanical Name:</label><input type="text" name="botanicalName"><!-- </div> -->
+<br>
+        <!--  <div> --><label for="type">Type</label><input type="text" name="type"><!-- </div> -->
+<br>
 
-         <div><label for="botanicalName">Botanical Name:</label><input type="text" name="botanicalName"></div>
-
-         <div><label for="type">Type</label><input type="text" name="type"></div>
-
-
-      <div>
+    <!--   <div> -->
              <label>Light Requirement</label>
              <select>
 
@@ -89,10 +86,10 @@
                <option value="Bright Indirect">Bright Indirect</option>
                <option value="Bright Direct">Bright Direct</option>
 
-             </select></div>
-
+             </select>
+	<br>
           
-            <div><label>Pot Size</label>
+           <label>Pot Size</label>
                <select class="potSize" name=potSize>
 
                  <option value="2">2</option>
@@ -106,9 +103,9 @@
                  <option value="24">09</option>
 
 
-               </select></div>
+               </select>
             
-</div>
+
      </fieldset>
 
      <button type="submit">Submit</button>
@@ -122,7 +119,7 @@
       </div>
 
     </div>
-  </section><!-- homePageDecoration -->
+  </section>
 
 </main>
 

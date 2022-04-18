@@ -44,7 +44,22 @@
   </div>
 </nav>
 
-	<h1>Update Plant</h1> <BR>
+  <section id="homePageDecoration" class="d-flex flex-column justify-content-center align-items-center">
+    <div class="home-container" data-aos="fade-in">
+
+      <div class="row no-gutters">
+
+        <div class="col1" id="leftSide">
+        <img src="https://live.staticflickr.com/65535/52012791968_645e62a402_w.jpg" width="400" height="400" alt="Add a Plant">
+          
+
+        </div>
+
+        <div class="col2" id="rightSide">
+          
+           	<h1>Update Plant</h1> <br>
+           <div class="main-block">
+ 
 
 
 	<div id="updateFrom">
@@ -73,10 +88,20 @@
 		<input id="care" type="text" placeholder="Beginner, Intermediate, Advanced" name="care" value="${plant.care}"/>
 		<br>
 			
-	
-	 <input type="submit"/>
-	</form>
-	</div>
+     <button type="submit">Submit</button>
+   </form>
+   </div>
+          
+          
+          
+          
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+
 	
 
 </body> 

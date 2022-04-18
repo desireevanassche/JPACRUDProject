@@ -77,17 +77,25 @@ h1 {
 font-size: 30px;}
 
 .col1 {
-  width: 40%;
+  width: 30%;
   display: inline-block;
 }
 
 .col2 {
-  width: 60%;
+  width: 70%;
   display: inline-block;
   padding-left: 100px;
+   justify-content: center;
 
 
 }
+
+#createForm {
+margin-top: 75px;
+margin-right: 20px;
+}
+
+
 .main-block {
    display: flex;
    justify-content: center;
@@ -102,7 +110,7 @@ font-size: 30px;}
    
    fieldset {
    border: none;
-   border-top: 1px solid #8ebf42;
+   border-top: 1px solid #743e1d;
    }
    
    .plant-details, .light-details {
@@ -128,6 +136,8 @@ font-size: 30px;}
    }
    
    input {
+   width: 100px;
+   height: 25px;
    padding: 5px;
    vertical-align: middle;
    }
@@ -138,25 +148,21 @@ font-size: 30px;}
    
    select, .experience, .size-block {
    width: calc(100% + 26px);
-   padding: 5px 0;
+
    }
    
    select {
+   width: 50px;
+   height:30px;
    
    background: transparent;
    }
    
-   .experience input {
-   width: auto;
-   }
-   
-   .experience label {
-   padding: 0 5px 0 0;
-   }
+
    
    .size-block {
    display: flex;
-   justify-content: space-between;
+   justify-content: center;
    }
    
    .potSize select.potSize {
@@ -168,23 +174,11 @@ font-size: 30px;}
    }
    
    .potSize input {
-   width: 25px;
-   height: 20px;
+    width: 40px;
+   height:30px;
    vertical-align: unset;
    }
    
-   .checkbox input {
-   width: auto;
-   margin: -2px 10px 0 0;
-   }
-   
-   .checkbox a {
-   color: #8ebf42;
-   }
-   
-   .checkbox a:hover {
-   color: #82b534;
-   }
    
    button {
    width: 100%;
@@ -192,19 +186,19 @@ font-size: 30px;}
    margin: 10px auto;
    border-radius: 5px;
    border: none;
-   background: pink;
+   background: #743e1d;
    font-size: 14px;
    font-weight: 600;
    color: #fff;
    }
    
    button:hover {
-   background: #82b534;
+   background: #B37548;
    }
    
    @media (min-width: 568px) {
    .plant-details >div, .light >div {
-   width: 50%;
+   width: 40%;
    }
    
    label {
@@ -213,12 +207,14 @@ font-size: 30px;}
    
    input {
    height: 20px;
-   width: 100px;
+   width: 300px;
    }
    
-   select, .experience, .size-block {
-   width: calc(60% + 16px);
-   }
+  select, .experience, .size-block {
+   width: 100px;
+
+
+   } 
    
 </style>
 
