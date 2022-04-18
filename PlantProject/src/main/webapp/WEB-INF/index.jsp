@@ -7,35 +7,62 @@
 <html>
 <head>
 <meta charset="UTF-8">
-<title>Insert title here</title>
 
-<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
-<link rel="stylesheet" href="css/index.css">
+<title>House of Plants</title>
+
 
 </head>
 <body>
 
+<%@include file="bootstrap.jsp"%> 
 
 <main class="container-fluid">
-<h1>WELCOME TO PLANT SITE</h1>
+
+  <section id="homePageDecoration" class="d-flex flex-column justify-content-center align-items-center">
+    <div class="home-container" data-aos="fade-in">
+
+      <div class="row no-gutters">
+
+        <div class="col1" id="leftSide">
+          <p id="portfolio">
+          </ul>
+
+        </div>
+
+        <div class="col2" id="rightSide">
+          <h1>Browse our Botanicals</h1>
+          <p>Search: <span class="typed" data-typed-items="Monsteras, Pothos, Fiddle Leaf Figs, Snake Plants"></span></p>
+       <form action="plantbykey.do" method="GET">
+   <input type="text" name="keyword" placeholder="Enter Keyword" />
+  <input type="submit" value="Search" />
+</form>
+        </div>
+      </div>
+
+    </div>
+  </section><!-- homePageDecoration -->
+
+  <main id="main">
 
 
 
-<a href="idSearch.do">Find by Id </a>
-<a href="keySearch.do">Find by Key </a>
+<h1>Welcome to Plant Site</h1>
+
 <a href="plantForm.do">Add a plant</a>
 <a href="deleteForm.do">Delete a plant</a>
 <a href="updateForm.do">Update a plant</a>
 
 
-
+<form action="getPlant.do" method="GET">
+  Film ID: <input type="text" name="pid" />
+  <input type="submit" value="Show Plant" />
+</form>
 
 
 <form action="plantbykey.do" method="GET">
-  Plant KeyWord Search: <input type="text" name="keyword" />
+  Plant KeyWord Search: <input type="text" name="keyword" placeholder="Search by Keyword" />
   <input type="submit" value="Show Plant" />
-</form> 
-
+</form>
 
 
 <table>

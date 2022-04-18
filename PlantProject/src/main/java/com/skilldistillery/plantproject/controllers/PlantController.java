@@ -14,75 +14,80 @@ import com.skilldistillery.plantproject.data.PlantDAO;
 
 @Controller
 public class PlantController {
-	
-	@Autowired
-	private PlantDAO plantDao; 
 
-	@RequestMapping(path= {"plantForm.do" })
+	@Autowired
+	private PlantDAO plantDao;
+
+	@RequestMapping(path = { "plantForm.do" })
 	public String plantForm() {
-	  return "addPlant";
+		return "addPlant";
 	}
-	
-	@RequestMapping(path= {"deleteForm.do" })
+
+	@RequestMapping(path = { "deleteForm.do" })
 	public String deletePage() {
-	  return "deletePlant";
+		return "deletePlant";
 	}
-	
-	@RequestMapping(path = {"updateForm.do"})
+
+	@RequestMapping(path = { "updateForm.do" })
 	public String updateForm() {
 		return "updatePlant";
 	}
-	
 
-	@RequestMapping(path = {"idSearch.do"})
+	@RequestMapping(path = { "idSearch.do" })
 	public String idSearchPage() {
 		return "findById";
 	}
-	@RequestMapping(path = {"keySearch.do"})
+
+	@RequestMapping(path = { "keySearch.do" })
 	public String keySearchPage() {
 		return "findByKey";
 	}
-	
-	
-	
-	@RequestMapping(path = {"/", "home.do"})
+
+	@RequestMapping(path = { "style.do" })
+	public String connectStyle() {
+		return "style";
+	}
+
+	@RequestMapping(path = { "/", "home.do" })
 	public String index(Model model) {
 		List<Plant> plants = plantDao.findAll();
 		model.addAttribute("plants", plants);
-		return "index"; 
+		return "index";
 	}
-	
-	@RequestMapping(path = {"getPlant.do"})
+
+	@RequestMapping(path = { "getPlant.do" })
 	public String showPlant(Integer pid, Model model) {
 		Plant plant = plantDao.findById(pid);
 		model.addAttribute("plant", plant);
 		return "plant/show";
-}
-	
-	@RequestMapping(path = {"plantbykey.do"})
+	}
+
+	@RequestMapping(path = { "plantbykey.do" })
 	public String findByKeyword(String keyword, Model model) {
 		List<Plant> plants = plantDao.findByKeyword(keyword);
 		model.addAttribute("plants", plants);
-		return "plant/show"; 
-}
-	@RequestMapping(path = {"addPlant.do"})
+		return "plant/show";
+	}
+
+	@RequestMapping(path = { "addPlant.do" })
 	public String addPlant(Plant plant, Model model) {
 		Plant newPlant = plantDao.addPlant(plant);
 		model.addAttribute("plant", newPlant);
-		return "plant/show"; 
-}
-	@RequestMapping(path = {"deleteplant.do"})
+		return "plant/show";
+	}
+
+	@RequestMapping(path = { "deleteplant.do" })
 	public String deletePlant(int id, Model model) {
 		boolean plantDeleted = plantDao.deletePlant(id);
-		model.addAttribute("plant", plantDeleted); 
+		model.addAttribute("plant", plantDeleted);
 		if (plantDeleted == true) {
 			return "deleteSuccessful";
 
 		} else {
 			return "deleteFail";
 		}
-		}
-	
+	}
+
 	@RequestMapping(path = "updatePlantById.do", params = "id", method = RequestMethod.GET)
 	public ModelAndView updatePlantById(int id) {
 		ModelAndView mv = new ModelAndView();
@@ -91,17 +96,17 @@ public class PlantController {
 		mv.setViewName("updatePlant");
 		return mv;
 	}
-	
+
 	@RequestMapping(path = "updatePlant.do", method = RequestMethod.POST)
 	public ModelAndView updatePlant(int id, Plant plant) {
 		ModelAndView mv = new ModelAndView();
-		
+
 		plantDao.updatePlant(id, plant);
-		
+
 		mv.setViewName("updateSuccessful");
-		return mv;  
+		return mv;
 	}
-	
+
 //	@RequestMapping(path = "updatePlant.do")
 //	public String updatePlant(Plant plant, Model model) {
 //		boolean plantUpdated = plantDao.updatePlant(plant);
@@ -111,12 +116,5 @@ public class PlantController {
 //	
 //		return "updateSuccessful";
 //	}
-	
-	
 
-	
-	}
-
-
-
-
+}

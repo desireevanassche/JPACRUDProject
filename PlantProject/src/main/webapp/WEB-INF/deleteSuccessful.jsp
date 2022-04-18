@@ -8,6 +8,7 @@
 
 </head>
 
+<link href="style.css" type="text/css" rel="stylesheet" />
 
 	<body>
 <h1>  Plant Successfully Deleted!</h1>
