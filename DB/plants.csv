@@ -1,0 +1,74 @@
+-- MySQL Workbench Forward Engineering
+
+SET @OLD_UNIQUE_CHECKS=@@UNIQUE_CHECKS, UNIQUE_CHECKS=0;
+SET @OLD_FOREIGN_KEY_CHECKS=@@FOREIGN_KEY_CHECKS, FOREIGN_KEY_CHECKS=0;
+SET @OLD_SQL_MODE=@@SQL_MODE, SQL_MODE='ONLY_FULL_GROUP_BY,STRICT_TRANS_TABLES,NO_ZERO_IN_DATE,NO_ZERO_DATE,ERROR_FOR_DIVISION_BY_ZERO,NO_ENGINE_SUBSTITUTION';
+
+-- -----------------------------------------------------
+-- Schema plantdb
+-- -----------------------------------------------------
+DROP SCHEMA IF EXISTS `plantdb` ;
+
+-- -----------------------------------------------------
+-- Schema plantdb
+-- -----------------------------------------------------
+CREATE SCHEMA IF NOT EXISTS `plantdb` DEFAULT CHARACTER SET utf8 ;
+USE `plantdb` ;
+
+-- -----------------------------------------------------
+-- Table `plant`
+-- -----------------------------------------------------
+DROP TABLE IF EXISTS `plant` ;
+
+CREATE TABLE IF NOT EXISTS `plant` (
+  `Id` INT NOT NULL AUTO_INCREMENT,
+  `name` VARCHAR(45) NOT NULL,
+  `botanical_name` VARCHAR(45) NULL,
+  `type` VARCHAR(45) NULL,
+  `light_requirement` VARCHAR(45) NULL,
+  `height_inches` INT NULL,
+  `pot_size` INT NULL,
+  `care_level` VARCHAR(45) NULL,
+  `humidity_requirement` VARCHAR(45) NULL,
+  PRIMARY KEY (`Id`))
+ENGINE = InnoDB;
+
+SET SQL_MODE = '';
+DROP USER IF EXISTS plant@localhost;
+SET SQL_MODE='ONLY_FULL_GROUP_BY,STRICT_TRANS_TABLES,NO_ZERO_IN_DATE,NO_ZERO_DATE,ERROR_FOR_DIVISION_BY_ZERO,NO_ENGINE_SUBSTITUTION';
+CREATE USER 'plant'@'localhost' IDENTIFIED BY 'plant';
+
+GRANT SELECT, INSERT, TRIGGER, UPDATE, DELETE ON TABLE * TO 'plant'@'localhost';
+
+SET SQL_MODE=@OLD_SQL_MODE;
+SET FOREIGN_KEY_CHECKS=@OLD_FOREIGN_KEY_CHECKS;
+SET UNIQUE_CHECKS=@OLD_UNIQUE_CHECKS;
+
+-- -----------------------------------------------------
+-- Data for table `plant`
+-- -----------------------------------------------------
+START TRANSACTION;
+USE `plantdb`;
+INSERT INTO `plant` (`Id`, `name`, `botanical_name`, `type`, `light_requirement`, `height_inches`, `pot_size`, `care_level`, `humidity_requirement`) VALUES (1, 'Snake Plant', 'Dracaena trifasciata', 'Succulent', 'Low Light - Bright Indirect', 36, 6, 'Beginner', 'Low');
+INSERT INTO `plant` (`Id`, `name`, `botanical_name`, `type`, `light_requirement`, `height_inches`, `pot_size`, `care_level`, `humidity_requirement`) VALUES (2, 'Golden Pothos', 'Epipremnum Aureum', 'Vine', 'Bright Indirect ', NULL, 6, NULL, 'Moderate');
+INSERT INTO `plant` (`Id`, `name`, `botanical_name`, `type`, `light_requirement`, `height_inches`, `pot_size`, `care_level`, `humidity_requirement`) VALUES (3, 'ZZ Plant', 'Zamioculcas Zamiifolia', 'Succulent', 'Low- Bright Indirect ', NULL, 6, 'Beginner', 'Low');
+INSERT INTO `plant` (`Id`, `name`, `botanical_name`, `type`, `light_requirement`, `height_inches`, `pot_size`, `care_level`, `humidity_requirement`) VALUES (4, 'Fiddle-Leaf Fig', 'Ficus Lyrata', 'Tree', 'Bright Direct', 65, 14, 'Advanced', 'High');
+INSERT INTO `plant` (`Id`, `name`, `botanical_name`, `type`, `light_requirement`, `height_inches`, `pot_size`, `care_level`, `humidity_requirement`) VALUES (5, 'Monstera Deliciosa', 'Monstera Deliciosa', 'Vine', 'Bright Indirect', 36, 14, 'Intermediate', 'Moderate - High');
+INSERT INTO `plant` (`Id`, `name`, `botanical_name`, `type`, `light_requirement`, `height_inches`, `pot_size`, `care_level`, `humidity_requirement`) VALUES (6, 'Wax Plant', 'Hoya', 'Vine', 'Bright Direct', NULL, 6, 'Intermediate', 'Intermediate');
+INSERT INTO `plant` (`Id`, `name`, `botanical_name`, `type`, `light_requirement`, `height_inches`, `pot_size`, `care_level`, `humidity_requirement`) VALUES (7, 'Swiss Cheese Monstera', 'Monstera adansonii', 'Vine', 'Bright Indirect', NULL, 6, 'Intermediate', 'Moderate - High');
+INSERT INTO `plant` (`Id`, `name`, `botanical_name`, `type`, `light_requirement`, `height_inches`, `pot_size`, `care_level`, `humidity_requirement`) VALUES (8, 'String of Pearls', 'Curio rowleyanus, syn Senecio rowleyanus', 'Succulent Vine', 'Bright Direct ', NULL, 4, 'Advanced', 'Low');
+INSERT INTO `plant` (`Id`, `name`, `botanical_name`, `type`, `light_requirement`, `height_inches`, `pot_size`, `care_level`, `humidity_requirement`) VALUES (9, 'Zebra Plant', 'Aphelandra squarrosa', NULL, 'Bright Indirect', NULL, 4, 'Intermediate', 'High');
+INSERT INTO `plant` (`Id`, `name`, `botanical_name`, `type`, `light_requirement`, `height_inches`, `pot_size`, `care_level`, `humidity_requirement`) VALUES (10, 'Chinese Money Plant', 'Pilea peperomioides', '', 'Moderate ', NULL, 6, 'Beginner', 'Moderate - High');
+INSERT INTO `plant` (`Id`, `name`, `botanical_name`, `type`, `light_requirement`, `height_inches`, `pot_size`, `care_level`, `humidity_requirement`) VALUES (11, 'Satin pothos', 'Scindapsus pictus', 'Vine', 'Low Light - Bright Indirect', NULL, 6, 'Beginner', 'Low - Moderate');
+INSERT INTO `plant` (`Id`, `name`, `botanical_name`, `type`, `light_requirement`, `height_inches`, `pot_size`, `care_level`, `humidity_requirement`) VALUES (12, 'African Mask ', 'Alocasia Polly', NULL, 'Bright Indirect', 18, 6, 'Intermediate', 'Moderate - High');
+INSERT INTO `plant` (`Id`, `name`, `botanical_name`, `type`, `light_requirement`, `height_inches`, `pot_size`, `care_level`, `humidity_requirement`) VALUES (13, 'Green Velvet Alocasia', 'Alocasia Micholitziana \'Frydek\'', NULL, 'Bright Indirect', 12, 6, 'Intermediate', 'Moderate - High');
+INSERT INTO `plant` (`Id`, `name`, `botanical_name`, `type`, `light_requirement`, `height_inches`, `pot_size`, `care_level`, `humidity_requirement`) VALUES (14, 'Varigated Rubber Tree', 'Hevea Brasiliensis', 'Tree', 'Bright Indirect', 24, 8, 'Advanced', 'Moderate - High');
+INSERT INTO `plant` (`Id`, `name`, `botanical_name`, `type`, `light_requirement`, `height_inches`, `pot_size`, `care_level`, `humidity_requirement`) VALUES (15, 'Peruvian Cactus', 'Cereus Peruvianus', 'Cacti', 'Bright Direct ', 36, NULL, 'Beginner', 'Low');
+INSERT INTO `plant` (`Id`, `name`, `botanical_name`, `type`, `light_requirement`, `height_inches`, `pot_size`, `care_level`, `humidity_requirement`) VALUES (16, 'Barrel Cactus', 'Echinocactus grusonii', 'Cacti', 'Bright Direct ', NULL, NULL, 'Beginner', 'Low');
+INSERT INTO `plant` (`Id`, `name`, `botanical_name`, `type`, `light_requirement`, `height_inches`, `pot_size`, `care_level`, `humidity_requirement`) VALUES (17, 'String of Bananas ', 'Curio rowleyanus, syn. Senecio rowleyanus', 'Succulent Vine ', 'Bright Direct ', NULL, 2, 'Intermediate', 'Low');
+INSERT INTO `plant` (`Id`, `name`, `botanical_name`, `type`, `light_requirement`, `height_inches`, `pot_size`, `care_level`, `humidity_requirement`) VALUES (18, 'Nerve Plant', 'Fittonia Albivenis', 'Flowering', 'Low Indirect - Moderate', NULL, 4, 'Advanced', 'High');
+INSERT INTO `plant` (`Id`, `name`, `botanical_name`, `type`, `light_requirement`, `height_inches`, `pot_size`, `care_level`, `humidity_requirement`) VALUES (19, 'Dumb Cane ', 'Dieffenbachia Amoena', NULL, 'Low Indirect - Moderate', NULL, 8, 'Beginner', 'Moderate');
+INSERT INTO `plant` (`Id`, `name`, `botanical_name`, `type`, `light_requirement`, `height_inches`, `pot_size`, `care_level`, `humidity_requirement`) VALUES (20, 'Calethea', 'Goeppertia veitchiana', 'Flowering ', 'Low Indirect - Moderate', NULL, 6, 'Advanced', 'HIgh');
+
+COMMIT;
+
