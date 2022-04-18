@@ -31,8 +31,6 @@ public class Plant {
 	@Column(name = "pot_size")
 	private Integer potSize;
 	
-	@Column
-	private Double price;
 
 	@Column(name = "care_level")
 	private String care;
@@ -117,14 +115,7 @@ public class Plant {
 	}
 
 
-	public Double getPrice() {
-		return price;
-	}
 
-
-	public void setPrice(Double price) {
-		this.price = price;
-	}
 
 
 	public String getCare() {
@@ -150,9 +141,12 @@ public class Plant {
 	@Override
 	public String toString() {
 		return "Plant [id=" + id + ", name=" + name + ", botanicalName=" + botanicalName + ", type=" + type + ", light="
-				+ light + ", height=" + height + ", potSize=" + potSize + ", price=" + price + ", care=" + care
-				+ ", humidity=" + humidity + "]";
+				+ light + ", height=" + height + ", potSize=" + potSize + ", care=" + care + ", humidity=" + humidity
+				+ "]";
 	}
+
+
+
 	
 	
 	}

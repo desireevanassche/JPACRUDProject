@@ -107,14 +107,5 @@ public class PlantController {
 		return mv;
 	}
 
-//	@RequestMapping(path = "updatePlant.do")
-//	public String updatePlant(Plant plant, Model model) {
-//		boolean plantUpdated = plantDao.updatePlant(plant);
-//		if(plantUpdated) {
-//			model.addAttribute("updatedPlant", plantUpdated);
-//		}
-//	
-//		return "updateSuccessful";
-//	}
 
 }
