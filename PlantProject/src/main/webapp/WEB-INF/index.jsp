@@ -10,7 +10,7 @@
 
 <title>House of Plants</title>
 
-
+<link href="assets/vendor/aos/aos.css" rel="stylesheet">
 </head>
 <body>
 
@@ -44,6 +44,53 @@
 
   <main id="main">
 
+        </section>
+    <!-- End About Section -->
+    
+    <section id="makeChanges" class="makeChanges section-bg">
+      <div class="container">
+
+        <div class="row">
+          <div class="col-lg-4 col-md-6 d-flex align-items-stretch">
+            <div class="card">
+              <div class="card-icon">
+              </div>
+              <div class="card-body">
+
+                <p class="card-image"><img src="https://live.staticflickr.com/65535/52012339689_b9a9cbe8e6_w.jpg" width="250" height="250" alt="plant"></a><h5 class="card-title"><a href="plantForm.do">Add an Entry</a></h5>
+
+                 </p>
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-4 col-md-6 d-flex align-items-stretch">
+            <div class="card">
+              <div class="card-icon">
+              </div>
+              <div class="card-body">
+
+                <p class="card-image"><img src="https://live.staticflickr.com/65535/52012326219_b98cf2085f_o.png" width="250" height="250" alt="plant"></a></p>
+                  <h5 class="card-title"><a href="updateForm.do">Edit an Entry</a></h5>
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-4 col-md-6 d-flex align-items-stretch">
+            <div class="card">
+              <div class="card-icon">
+              </div>
+              <div class="card-body">
+
+                <p class="card-image"><img src="https://live.staticflickr.com/65535/52012173113_346c9b7825_w.jpg"
+				width="250" height="250" alt="plant"></a>
+      <h5 class="card-title"><a href="">See All</a></h5> </p>
+
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </section><!-- End Why Us Section -->
 
 
 <h1>Welcome to Plant Site</h1>
@@ -87,4 +134,6 @@
 
 </main>
 </body>
+
+
 </html>

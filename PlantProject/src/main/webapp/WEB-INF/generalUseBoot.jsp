@@ -190,48 +190,6 @@ section {
   color: #173b6c;
 }
 
-.makeChanges {
-  padding-bottom: 30px;
-}
-.makeChanges .card {
-  border-radius: 3px;
-  border: 0;
-  box-shadow: 0px 2px 15px rgba(0, 0, 0, 0.1);
-  margin-bottom: 30px;
-}
-
-.makeChanges .card-body {
-width:300px;
-  padding-top: 12px;
-}
-.makeChanges .card-title {
-  font-weight: 400;
-  text-align: center;
-}
-.makeChanges .card-title a {
-  color: #743e1d;
-}
-.makeChanges .card-title a:hover {
-  color: #B37548;
-}
-.makeChanges .card-image {
-
-  justify-content: center;
-  align-items: center;
-}
-
-@media (max-width: 1024px) {
-  .makeChanges {
-    background-attachment: scroll;
-  }
-}
-
-@media (max-width: 1024px) {
-  .makeChange-us {
-    background-attachment: scroll;
-  }
-}
-
 </style>
 
 
