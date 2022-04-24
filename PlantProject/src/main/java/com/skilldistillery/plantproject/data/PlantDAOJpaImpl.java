@@ -62,10 +62,12 @@ public class PlantDAOJpaImpl implements PlantDAO {
 	Plant managePlant = em.find(Plant.class, id);
 
     managePlant.setName(plant.getName());
+    managePlant.setType(plant.getType());
     managePlant.setBotanicalName(plant.getBotanicalName());
     managePlant.setHumidity(plant.getHumidity());
     managePlant.setLight(plant.getLight());
     managePlant.setCare(plant.getCare());
+    managePlant.setPotSize(plant.getPotSize());
 		
 		
 		em.flush();

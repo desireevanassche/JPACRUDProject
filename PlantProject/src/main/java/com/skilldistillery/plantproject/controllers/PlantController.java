@@ -54,26 +54,35 @@ public class PlantController {
 		model.addAttribute("plants", plants);
 		return "index";
 	}
+	
+	@RequestMapping(path = { "showAll.do" })
+	public String showAll(Model model) {
+		List<Plant> plants = plantDao.findAll();
+		model.addAttribute("plants", plants);
+		return "showAllResults";
+	}
 
+
+	
 	@RequestMapping(path = { "getPlant.do" })
 	public String showPlant(Integer pid, Model model) {
 		Plant plant = plantDao.findById(pid);
 		model.addAttribute("plant", plant);
-		return "plant/show";
+		return "show";
 	}
 
 	@RequestMapping(path = { "plantbykey.do" })
 	public String findByKeyword(String keyword, Model model) {
 		List<Plant> plants = plantDao.findByKeyword(keyword);
 		model.addAttribute("plants", plants);
-		return "plant/show";
+		return "show";
 	}
 
 	@RequestMapping(path = { "addPlant.do" })
 	public String addPlant(Plant plant, Model model) {
 		Plant newPlant = plantDao.addPlant(plant);
 		model.addAttribute("plant", newPlant);
-		return "plant/show";
+		return "show";
 	}
 
 	@RequestMapping(path = { "deleteplant.do" })

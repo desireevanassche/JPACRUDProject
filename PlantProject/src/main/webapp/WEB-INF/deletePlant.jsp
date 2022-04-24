@@ -14,17 +14,6 @@
 
 <body>
 
-	<!-- 	id
-	name
-	 botanicalName
-	 type
-	  light
-	   potSize
-	     care
-	   -- dont add height
-	    --- dont add price
-	    humidity; -->
-
 
 	<h1>Which plant would you like to delete? </h1>
 	<br>

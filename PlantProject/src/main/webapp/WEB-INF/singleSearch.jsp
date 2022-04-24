@@ -42,9 +42,12 @@
 
 <style> 
 
+
+
 body {
   font-family: 'Source Sans Pro', sans-serif;
   color: #272829;
+    
 }
 
 a {
@@ -67,135 +70,21 @@ font-family: 'Yeseva One', cursive;
 /*--------END NAV BAR MENU ---------------------------------------*/
 
 .col1 {
-  width: 50%;
+  width: 60%;
   display: inline-block;
+ 
 }
 
 .col2 {
-  width: 50%;
+  width: 40%;
   display: inline-block;
-  padding-left: 100px;
-
 
 }
 
-
-#homePageDecoration {
-  width: 100%;
-  height: 100vh;
-  background: url("https://live.staticflickr.com/65535/52006366091_d0fc533e96_o.png") center center;
-  background-size: cover;
-  position: relative;
-  margin-top: -80px;
-  z-index: 9;
+h1 {
+padding-top: 150px;
 }
 
-#home .home-container {
-  position: absolute;
-  bottom: 0;
-  top: 0;
-  left: 0;
-  right: 0;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-direction: column;
-  text-align: center;
-  padding: 0 15px;
-}
-
-#homePageDecoration h1 {
-  font-size: 75px;
-  margin-top: 50px;
-  line-height: 56px;
-  color: #EBE6E4;
-}
-
-#homePageDecoration p {
-  display: inline-block;
-  text-align: left;
-  font-size: 35px;
-  font-family: 'Source Sans Pro', sans-serif;
-  font-weight: 400;
-  color: #EBE6E4;
- 
-
-}
-
-@media (min-width: 1024px) {
-  #homePageDecoration {
-    background-attachment: fixed;
-  }
-}
-
-button {
-	display: inline-block;
-	width: 100px;
-	padding: 2px 0;
-	margin: 2px auto;
-	border-radius: 5px;
-	border: none;
-	background: #743e1d;
-	font-size: 14px;
-	font-weight: 600;
-	color: #fff;
-}
-
-input[type=submit]   {
-height: 30px;
-	display: inline-block;
-	width: 100px;
-	padding: 2px 0;
-	margin: 2px auto;
-	border-radius: 5px;
-	border: none;
-	background: #743e1d;
-	font-size: 14px;
-	font-weight: 600;
-	color: #fff;
-} 
-
-input[type=submit]:hover {
-	background: #292F1E;
-}
-
-input {
-	border-radius: 5px;
-}
-
-section {
-  padding: 60px 0;
-  overflow: hidden;
-}
-
-.section-title, #aboutHead {
-  color: #22391B;
-}
-.section-bg {
-  background: #EBE6E4;
-}
-
-.section-title {
-  padding-bottom: 60px;
-}
-.section-title h2 {
-  font-size: 32px;
-  font-weight: bold;
-  margin-bottom: 5px;
-  padding-bottom: 5px;
-  position: relative;
-  color: #173b6c;
-}
-
-.section-title p {
-  margin-bottom: 0;
-}
-
-.about .content h3 {
-  font-weight: 700;
-  font-size: 26px;
-  color: #173b6c;
-}
 
 </style>
 

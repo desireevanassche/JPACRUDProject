@@ -15,7 +15,7 @@
 
 
 <nav class="navbar navbar-expand-lg navbar-light bg-light">
-  <a class="navbar-brand" href="#">House of Plants</a>
+  <a class="navbar-brand" href="home.do">House of Plants</a>
   <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
     <span class="navbar-toggler-icon"></span>
   </button>
@@ -23,7 +23,7 @@
   <div class="collapse navbar-collapse" id="navbarSupportedContent">
     <ul class="navbar-nav mr-auto">
       <li class="nav-item active">
-        <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
+        <a class="nav-link" href="home.do">Home <span class="sr-only">(current)</span></a>
       </li>
      
       <li class="nav-item dropdown">
@@ -35,7 +35,6 @@
           <a class="dropdown-item" href="idSearch.do">Search by ID</a>
           <a class="dropdown-item" href="plantForm.do">Add an Entry</a>
           <a class="dropdown-item" href="updateForm.do">Update an Entry</a>
-          <a class="dropdown-item" href="#">View All</a>
         </div>
       </li>
    
@@ -44,20 +43,17 @@
   </div>
 </nav>
 
-  <section id="homePageDecoration" class="d-flex flex-column justify-content-center align-items-center">
-    <div class="home-container" data-aos="fade-in">
 
       <div class="row no-gutters">
 
         <div class="col1" id="leftSide">
-        <img src="https://live.staticflickr.com/65535/52012791968_645e62a402_w.jpg" width="400" height="400" alt="Add a Plant">
-          
+<img src="https://live.staticflickr.com/65535/52021100440_2a9c60705c_c.jpg" width="600" height="700" alt="Snake Plant">         
 
         </div>
 
         <div class="col2" id="rightSide">
           
-           	<h1>Update Plant</h1> <br>
+           	<h1>Update Plant</h1>
            <div class="main-block">
  
 

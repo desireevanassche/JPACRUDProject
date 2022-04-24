@@ -23,7 +23,7 @@
   <div class="collapse navbar-collapse" id="navbarSupportedContent">
     <ul class="navbar-nav mr-auto">
       <li class="nav-item active">
-        <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
+        <a class="nav-link" href="home.do">Home <span class="sr-only">(current)</span></a>
       </li>
      
       <li class="nav-item dropdown">
@@ -35,7 +35,7 @@
           <a class="dropdown-item" href="idSearch.do">Search by ID</a>
           <a class="dropdown-item" href="plantForm.do">Add an Entry</a>
           <a class="dropdown-item" href="updateForm.do">Update an Entry</a>
-          <a class="dropdown-item" href="#">View All</a>
+      
         </div>
       </li>
    
@@ -47,35 +47,33 @@
 
 <main class="container-fluid">
 
-  <section id="homePageDecoration" class="d-flex flex-column justify-content-center align-items-center">
-    <div class="home-container" data-aos="fade-in">
 
       <div class="row no-gutters">
 
         <div class="col1" id="leftSide">
-        <img src="https://live.staticflickr.com/65535/52012791968_645e62a402_w.jpg" width="400" height="400" alt="Add a Plant">
-          
+        <img src="https://live.staticflickr.com/65535/52020248441_c1379726f6_z.jpg" width="560" height="640" alt="Varigated Rubber Tree">
 
         </div>
 
         <div class="col2" id="rightSide">
           
-           <div class="main-block">
+    
    <form action="addPlant.do" method="POST" id="createForm">
+     
      <h1>Add a Plant to the Database</h1>
      <fieldset>
 
-       <!-- <div  class="plant-details"> -->
+   
 
-        <!--  <div> --><label for="name">Name</label><input type="text" name="name" required><!-- </div> -->
+      <label for="name">Name</label><input type="text" name="name" required>
 
 <br>
-       <!--   <div> --><label for="botanicalName">Botanical Name:</label><input type="text" name="botanicalName"><!-- </div> -->
+       <label for="botanicalName">Botanical Name:</label><input type="text" name="botanicalName">
 <br>
-        <!--  <div> --><label for="type">Type</label><input type="text" name="type"><!-- </div> -->
+       <label for="type">Type:</label><input type="text" name="type">
 <br>
 
-    <!--   <div> -->
+
              <label>Light Requirement</label>
              <select>
 
@@ -90,7 +88,7 @@
 	<br>
           
            <label>Pot Size</label>
-               <select class="potSize" name=potSize>
+               <select class="potSize" name="potSize">
 
                  <option value="2">2</option>
                  <option value="4">4</option>
@@ -103,7 +101,25 @@
                  <option value="24">09</option>
 
 
-               </select>
+               </select><br>
+               
+           <label>Care Level</label>
+               <select class="care" name="care">
+
+                 <option value="Beginner">Beginner</option>
+                 <option value="Intermediate">Intermediate</option>
+                 <option value="Advanced">Advanced</option>
+               </select><br>
+               
+           <label>Humidity Requirement</label>
+               <select class="humidity" name="humidity">
+                 <option value="Low">Low</option>
+                 <option value="Low - Moderate">Low - Moderate</option>
+                 <option value="Moderate">Moderate</option>
+                 <option value="Moderate - High">Moderate - High</option>
+                 <option value="High">High</option>
+               </select><br>
+            
             
 
      </fieldset>
@@ -116,55 +132,8 @@
           
           
         </div>
-      </div>
-
-    </div>
-  </section>
+ 
 
 </main>
-
-
-
-
-
-
-	<!-- <h1>Add a Plant to the Database</h1>
-	<br>
-
-	<form action="addPlant.do" method="POST" id="createForm">
-
-		<label for="name">Name: </label> <input type="text" name="name"><br>
-
-		<label for="botanicalName">Botanical Name: </label> <input type="text"
-			name="botanicalName"><br> 
-			
-			<label for="type">type</label> 
-		
-		<input type="text" name="type"> <label for="type">type
-		</label> 
-		
-		
-		<select name="light" id="light">
-			<option value="Beginner">Beginner</option>
-			<option value="Intermediate">Intermediate</option>
-			<option value="Advanced">Advanced</option> </select><br> 
-			
-			
-			
-			<label for="potSize">potSize: </label> <select
-			name="potSize">
-			<option value="2">2</option>
-			<option value="4">4</option>
-			<option value="6">6</option>
-			<option value="8">8</option>
-			<option value="10">10</option>
-			<option value="12">12</option>
-			<option value="14">14</option>
-			<option value="18">18</option>
-			<option value="24">19</option>
-
-		</select> <br> <input type="submit" value="Add Plant" /> <br>
- -->
-	</form>
 </body>
 </html>
